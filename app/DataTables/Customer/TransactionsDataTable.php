@@ -66,8 +66,12 @@ class TransactionsDataTable extends DataTable
     {
         return [
             Column::make('id'),
-            Column::make('description'),
             Column::make('amount'),
+            Column::make('paid_amount'),
+            Column::make('status'),
+            Column::make('vat'),
+            Column::make('due_on'),
+            Column::make('is_vat')->title('is vat inclusive'),
             Column::make('created_at_formatted')->title('created at'),
             Column::make('updated_at_formatted')->title('updated at'),
         ];
